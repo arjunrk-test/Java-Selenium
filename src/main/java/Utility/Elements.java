@@ -10,5 +10,6 @@ public class Elements extends DriverImpl {
     }
 
     public static By username = By.cssSelector("input[name = 'username']");
+    public static By password = By.cssSelector("input[name = 'password']");
 
 }

@@ -20,4 +20,9 @@ public class Action extends DriverImpl {
         Thread.sleep(500);
     }
 
+    public static void sendKeys(By element, int index, String key) throws InterruptedException, IOException{
+        driver.findElements(element).get(index).sendKeys(key);
+        Thread.sleep(500);
+    }
+
 }

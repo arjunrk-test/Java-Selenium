@@ -1,6 +1,7 @@
 package Utility;
 
 import BaseClass.DriverImpl;
+import org.openqa.selenium.By;
 
 public class LoginUtil extends DriverImpl {
 
@@ -21,9 +22,15 @@ public class LoginUtil extends DriverImpl {
         }
     }
 
+    public static void openURL(String browser) throws Exception{
+        LoginUtil.Driver(browser);
+        driver.get(GlobalVariables.url);
+    }
+
     public static void login(String browser) throws Exception{
         LoginUtil.Driver(browser);
         driver.get(GlobalVariables.url);
+        Action.waitBy(Elements.username);
     }
 
     public static void close(){

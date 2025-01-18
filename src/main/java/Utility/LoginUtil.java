@@ -34,6 +34,9 @@ public class LoginUtil extends DriverImpl {
         Action.waitBy(Elements.username);
         Action.sendKeys(Elements.username, 0, GlobalVariables.loginUserName);
         Action.sendKeys(Elements.password, 0, GlobalVariables.loginUserPassword);
+        driver.findElements(Elements.submit).get(0).click();
+        Action.waitBy(Elements.header);
+        Thread.sleep(3000);
     }
 
     public static void close(){

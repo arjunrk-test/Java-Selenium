@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 
 public class LoginPage {
-    @Test(enabled = true, dataProvider = "chrome", dataProviderClass = DataProvider.class)
+    @Test(enabled = true, dataProvider = "both", dataProviderClass = DataProvider.class)
     public void checkLogin(String browser) throws InterruptedException, IOException{
         try{
             PrintStream console = System.out;

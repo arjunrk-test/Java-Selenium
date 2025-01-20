@@ -19,6 +19,7 @@ public class LoginPage {
             System.out.println(console);
         }
         catch(Exception | AssertionError e){
+            System.out.println(e);
             Assert.assertEquals(1, 2);
         }
     }

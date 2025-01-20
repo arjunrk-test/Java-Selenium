@@ -4,14 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import java.util.Locale;
+
 public class DriverImpl {
     public static WebDriver driver;
     private String driverPath;
 
     @SuppressWarnings("deprecation")
     public DriverImpl(int flag) {
-        String osInfo = System.getProperty("os.name").toLowerCase();
-        driverPath = getDriverPath(osInfo, flag);
+        driverPath = getDriverPath(GlobalVariables.osInfo.toLowerCase(Locale.ROOT), flag);
         if (flag == 1) {
             System.setProperty("webdriver.chrome.driver", driverPath);
             driver = new ChromeDriver();
